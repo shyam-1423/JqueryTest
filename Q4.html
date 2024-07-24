@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+    <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body, html {
+                height: 100%;
+                width:100%;
+                text-align: center;
+                background:#dcdcdc;
+                margin:0;
+                padding:0;
+                position:relative;
+            }
+            h1 {
+                color:#4a4a4a;
+                text-align:center;
+            }
+            img {
+                margin: 0 auto;
+                display:block;
+            }
+            #overlayer {
+                width:100%;
+                height:100%;  
+                position:absolute;
+                z-index:1;
+                background:#5329e9;
+            }
+            .loader {
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                z-index:3;
+                border: 4px solid #ffffff;
+                border-radius: 12%;
+                top: 50%;
+                animation: loader 2.5s infinite ease;
+            }
+
+            .loader-inner {
+                vertical-align: top;
+                display: inline-block;
+                width: 100%;
+                background-color: #7cbae4;
+                animation: loader-inner 1.5s infinite ease-in;
+            }
+            h1{
+                width: 50%;
+                padding-left: 15%;
+            }
+            @keyframes loader {
+                0% {
+                    transform: rotate(0deg);
+                }
+                
+                25% {
+                    transform: rotate(180deg);
+                }
+                
+                50% {
+                    transform: rotate(180deg);
+                }
+                
+                75% {
+                    transform: rotate(360deg);
+                }
+                
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes loader-inner {
+                0% {
+                    height: 0%;
+                }
+                
+                25% {
+                    height: 0%;
+                }
+                
+                50% {
+                    height: 100%;
+                }
+                
+                75% {
+                    height: 100%;
+                }
+                
+                100% {
+                    height: 0%;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div id="overlayer"></div>
+    <span class="loader">
+      <span class="loader-inner">
+
+      </span>
+    </span>
+    <h1>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora doloremque fuga explicabo enim rem totam. Dolor sit cumque ducimus magnam fugiat, dolorem corporis incidunt atque dicta at voluptas excepturi consequatur.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora doloremque fuga explicabo enim rem totam. Dolor sit cumque ducimus magnam fugiat, dolorem corporis incidunt atque dicta at voluptas excepturi consequatur.
+    </h1>
+    <img src="https://i0.wp.com/picjumbo.com/wp-content/uploads/breathtaking-bali-nature-free-photo.jpg?w=600&quality=80" alt="" height="80%" width="80%"/>
+    <script>
+    $(window).ready(function() {
+	    $(".loader").delay(2000).fadeOut("slow");
+        $("#overlayer").delay(2000).fadeOut("slow");
+    })
+    </script>
+</body>
+</html>

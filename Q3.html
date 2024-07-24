@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .section1{
+            height: 50vh;
+            width: 50vw;
+            background-color: #72a0f59c;
+            border: 2px solid #293b5091;
+            border-radius: 10px;
+            margin: 15%;
+            padding: 10%;
+        }
+        .main,.main1,.main2{
+            height: auto;
+            width: 15vw;
+            background-color: #dfdfdfbb;
+            border: 1px solid black;
+            border-radius: 8px;
+        }
+        .sub,.sub1,.sub2{
+            height: auto;
+            width: 14.9vw;
+            background-color: #ffffff;
+            display: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section class="section1">
+        <div class="main">
+            <h1>Cybertruck</h1>
+            <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
+            <div class="sub">
+                Built for any adventure, Cybertruck has a durable exterior, spacious ...Built for any adventure, Cybertruck has a durable exterior, spacious ...Built for any adventure, Cybertruck has a durable exterior, spacious ...
+            </div>
+        </div>
+        <div class="main1">
+            <h1>Model S</h1>
+            <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
+            <div class="sub1">
+                Model S. Dual Motor All-Wheel Drive unlocks more range than ...Model S. Dual Motor All-Wheel Drive unlocks more range than ...Model S. Dual Motor All-Wheel Drive unlocks more range than ...
+            </div>
+        </div>
+        <div class="main2">
+            <h1>Model 3</h1>
+            <span><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z"/></svg></span>
+            <div class="sub2">
+                Model 3 is designed for electric-powered performance, with ...Model 3 is designed for electric-powered performance, with ...Model 3Model 3 is designed for electric-powered performance, with ...
+            </div>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+            $(".main").click(function () {
+                $(".sub").slideToggle()
+                $(".sub1").slideUp()
+                $(".sub2").slideUp()
+            })
+            $(".main1").click(function () {
+                $(".sub1").slideToggle()
+                $(".sub").slideUp()
+                $(".sub2").slideUp()
+            })
+            $(".main2").click(function () {
+                $(".sub2").slideToggle()
+                $(".sub").slideUp()
+                $(".sub1").slideUp()
+            })
+        })
+    </script>
+</body>
+</html>
